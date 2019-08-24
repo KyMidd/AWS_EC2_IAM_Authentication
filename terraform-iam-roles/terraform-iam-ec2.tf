@@ -1,5 +1,5 @@
 ##
-# Module to build the Azure DevOps "seed" configuration
+# Terraform to build IAM policies, roles, trusts
 ##
 
 # Define terraform provider
