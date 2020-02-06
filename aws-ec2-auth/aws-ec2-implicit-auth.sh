@@ -11,7 +11,7 @@ unset ACCOUNT_ID
 curl -s http://169.254.169.254/latest/meta-data/identity-credentials/ec2/info | jq -r '.AccountId' | awk '{print "export", "ACCOUNT_ID="$0}' > variables
 
 # Call for INSTANCE_ID
-curl -s http://169.254.169.254/latest/meta-data/instance-id | awk '{print "export", "INSTANCE_ID="$0}' > variables
+curl -s http://169.254.169.254/latest/meta-data/instance-id | awk '{print "export", "INSTANCE_ID="$0}' >> variables
 
 # Read account ID variables into global
 . ./variables
